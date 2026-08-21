@@ -1,0 +1,6 @@
+name = "gomidomo"
+main = "src/index.js"
+compatibility_date = "2026-08-21"
+
+[assets]
+directory = "."
