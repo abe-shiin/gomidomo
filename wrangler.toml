@@ -2,6 +2,7 @@ name = "gomidomo"
 main = "src/index.js"
 compatibility_date = "2026-08-21"
 
-[site]
-bucket = "."
-exclude = [".git/**"]
+[assets]
+directory = "."
+binding = "ASSETS"
+ignore = [".git/**"]
