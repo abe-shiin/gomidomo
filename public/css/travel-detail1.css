@@ -1,0 +1,236 @@
+@charset "utf-8";
+
+.title{
+    height: 360px;
+    background-image: url(../images/5.jpg);
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    justify-content: flex-end;
+    padding-right: 40px;
+    padding-bottom: 30px;
+    color: #ffffff;
+
+    text-align: right;
+}
+.title h1{
+    font-family:'Montserrat',sans-serif;
+    font-size: 32px;
+    font-weight: bold;
+    margin: 0;
+
+}
+.title p1{
+    font-size: 14px;
+    margin-top: 5px;
+}
+.title p2{
+    font-size: 14px;
+    margin-top: 5px;
+}
+.travel-contents{
+    width: 1700px;
+    max-width: 90%;
+    margin-top: 75px;
+    margin-left: auto;
+    margin-right: auto;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row-reverse;
+}
+.travel-contents h2{
+    font-family:'Montserrat',sans-serif;
+    font-size: 22px;
+    font-weight: bold;
+    margin: 0;
+}
+.travel-item{
+    flex-grow: 1;
+    max-width: 1200px;
+}
+
+.travel-item h2{
+    margin: 0;
+    font-size: 22px;
+    font-weight: bold;
+    line-height: 30px;
+}
+.travel-item h2::after{
+     content: '';
+    display: block;
+    width: 36px;
+    height: 3px;
+    background-color: #000000;
+    margin-top: 20px;
+}
+.travel-list{
+    margin-top: 25px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(250px, 1fr));
+    column-gap: 50px;
+    row-gap: 40px;
+}
+.travel-list a{ 
+    display: block;
+}
+.travel-list a:hover{
+    transform: scale(1.05);
+    transition-duration: 0.25s;
+}
+.travel-list img{
+    width: 100%;
+    display: block;
+}
+.travel-list dl{
+    margin-top: 20px;
+}
+.travel-list dt{
+    font-weight: bold;
+}
+.travel-list dd{
+    font-size: 13px;
+    line-height: 20px;
+    margin-top: 10px;
+}
+.travel-menu{
+    flex-shrink: 0;
+    width: 200px;
+    margin-right: 60px;
+}
+.travel-menu-inner{
+    position: sticky;
+    top: 30px;
+    left: 0;
+    right: 0;
+}
+.travel-menu-inner h2{
+    font-size: 18px;
+    font-weight: bold;
+}
+.travel-menu-inner ul{
+    list-style-type: disc;
+    margin-top: 20px;
+    margin-left: 20px;
+}
+.travel-menu-inner li{
+    font-size: 14px;
+    margin-top: 15px;
+}
+.item-area{
+    margin-top: 20px;
+    display: block;
+}
+.item-area img{
+    width: 100%;
+    max-width: 600px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+.item-area p{
+    display: block;
+}
+.about-item{
+    margin-left: 30px;
+    margin-top: 20px;
+    text-align: center;
+    font-size: 40px;
+    margin-bottom: 40px;
+}
+.about-item a{
+    background-color: #f4dd64;
+    display: inline-block;
+    min-width:180px;
+    line-height: 40px;
+    border-radius: 20px;
+    font-family: "Montserrat", sans-serif;
+    font-size: 14px;
+    text-align: center;
+    margin-top: 35px;
+}
+.about-item a:hover{
+    background-color: #d8b500
+}
+.place{
+    width: 100%;
+    margin-top: 75px;
+}
+.place iframe{
+    display: block;
+    width: 100%;
+    height: 320px;
+    margin-top: 25px;
+     border: 0;
+}
+.footer{
+    margin-top: 100px;
+}
+.footer .site-menu{
+    font-size: 25px;
+}
+.footer-logo{
+    width: 250px;
+}
+@media(max-width: 800px){
+    .travel-contents{
+        display: block;
+        max-width: 100%;
+        margin-top: 60px;
+    }
+    .travel-item{
+        max-width: 540px;
+        margin-left: auto;
+        margin-right: auto;
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+    .travel-list{
+        grid-template-columns: repeat(auto-fit,minmax(200px,1fr));
+        column-gap: 35px;
+    }
+    .travel-menu{
+        background-color: #ffffff;
+        padding-top: 50px;
+        padding-bottom: 50px;
+        margin-top: 60px;
+        margin-right: 0;
+    }
+    .travel-menu-inner{
+        max-width: 540px;
+        margin-left: auto;
+        margin-right: auto;
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+    .item-area{
+        display: block;
+    }
+    .item-area img{
+        width: 100%;
+        max-width: 100%;
+    }
+    .about-item{
+        margin-top: 20px;
+        margin-left: 0;
+    }
+    .about-item a{
+        width: 100%;
+    }
+    .footer{
+     margin-top: 100px;
+    }
+    .footer .site-menu{
+     font-size: 25px;
+    }
+    .footer .site-menu ul{
+        display: flex;
+        justify-content: center;
+        gap: 40px;
+    }
+    .footer-logo{
+     width: 250px;
+    }
+}
