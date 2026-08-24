@@ -67,6 +67,17 @@
 .footer{
     margin-top: 100px;
 }
+.footer .site-menu{
+    font-size: 25px;
+}
+.footer .site-menu ul{
+        display: flex;
+        justify-content: center;
+        gap: 40px;
+    }
+.footer-logo{
+    width: 250px;
+}
 @media(max-width: 800px){
     .item-list{
         margin-top: 45px;
