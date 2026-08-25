@@ -10,7 +10,17 @@ export async function onRequest(context) {
       const [user, pass] = decoded.split(":");
 
       if (user === USERNAME && pass === PASSWORD) {
-        return await context.next();
+        const response = await context.next();
+        const headers = new Headers(response.headers);
+        headers.set("Cache-Control", "private, no-store, no-cache, must-revalidate");
+        headers.set("Pragma", "no-cache");
+        headers.set("Expires", "0");
+
+        return new Response(response.body, {
+          status: response.status,
+          statusText: response.statusText,
+          headers,
+        });
       }
     }
   }
@@ -19,6 +29,9 @@ export async function onRequest(context) {
     status: 401,
     headers: {
       "WWW-Authenticate": 'Basic realm="Protected Site"',
+      "Cache-Control": "private, no-store, no-cache, must-revalidate",
+      "Pragma": "no-cache",
+      "Expires": "0",
     },
   });
 }
